@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: asgbuggy-deployment
+  name: jagpsibuggy-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: asgbuggy
+      app: jagpsibuggy
   template:
     metadata:
       labels:
-        app: asgbuggy
+        app: jagpsibuggy
     spec:
       containers:
-      - name: asgbuggy
+      - name: jagpsibuggy
         image: 145988340565.dkr.ecr.us-west-2.amazonaws.com/asg
         imagePullPolicy: Always
         ports:
@@ -24,9 +24,9 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: asgbuggy
-    k8s-app: asgbuggy
-  name: asgbuggy
+    app: jagpsibuggy
+    k8s-app: jagpsibuggy
+  name: jagpsibuggy
 spec:
   ports:
   - name: http
